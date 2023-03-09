@@ -1,0 +1,11 @@
+package streamAPI;
+
+public class Testing {
+	static int a = 12;
+	static int b = 11;
+	static int c = a - b;
+	public static void main(String[] args) {
+		System.out.println("Ibrahima votre calcul est egale a "+c);
+	}
+
+}

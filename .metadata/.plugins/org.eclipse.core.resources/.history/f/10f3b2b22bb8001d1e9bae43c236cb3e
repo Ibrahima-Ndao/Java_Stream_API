@@ -1,0 +1,16 @@
+package streamAPI;
+
+public class Testing {
+	static String[] name = {"Ibrahima", "Lamine", "Habib", "Daouda"};
+	public static int sous() {
+		 int a = 12;
+		 int b = 11;
+		 int c = a - b;
+		return c;
+	}
+	public static void main(String[] args) {
+		System.out.println("Ibrahima votre calcul est egale a "+sous());
+		
+	}
+
+}

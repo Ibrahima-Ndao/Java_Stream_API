@@ -1,0 +1,51 @@
+package streamAPI;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import streamAPI.database.DataOfPerson;
+import streamAPI.model.Person;
+
+public class Testing {
+	static int[] number = {12, 3, 5, 6, 78};
+	static List<Integer> numbers = new ArrayList<>(Arrays.asList(1, 23, 3, 45, 6, 67, 8)); 
+	public static int sous() {
+		 int a = 12;
+		 int b = 11;
+		 int c = a - b;
+		return c;
+	}
+	public static void main(String[] args) {
+	//	System.out.println("Ibrahima votre calcul est egale a "+sous());
+//		for (Integer n : numbers) {
+//			System.out.println(n);
+//		}
+		//numbers.forEach(System.out::println);
+//		numbers.forEach(number -> {
+//			System.out.println(number);
+//		});
+		DataOfPerson dataOfPerson = new DataOfPerson();
+		//dataOfPerson.data().forEach(System.out::println); // show the list of all person
+		// method to show the list of person have 18 or more than 18
+		/*
+		List<Person> persons = dataOfPerson.data();
+		Stream<Person> p =  persons.stream().filter(person -> person.getAge() >= 18);
+		p.forEach(i -> {
+			System.out.println(i);
+		});
+		*/
+		// method to show the list of person who have 18 or less 18
+		//dataOfPerson.data().stream().filter(p -> p.getAge() <= 18).forEach(System.out::println);
+		// method to show the list of person who have 18 or less 18 limit on the two first persons
+		//dataOfPerson.data().stream().filter(p -> p.getAge() <= 18).limit(2).forEach(System.out::println);
+		// method to show the list of person who have 18 or more then 18 limit on the five first persons
+		List<Person> persons = dataOfPerson.data();
+		List<Person> p =  persons.stream().filter(person -> person.getAge() >= 18).limit(5).collect(Collectors.toList());
+		p.forEach(i -> {
+			System.out.println(i);
+		});
+	}
+}

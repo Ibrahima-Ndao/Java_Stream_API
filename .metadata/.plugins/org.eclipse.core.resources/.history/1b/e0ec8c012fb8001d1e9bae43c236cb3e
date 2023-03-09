@@ -1,0 +1,5 @@
+package streamAPI.model;
+
+public class Person {
+
+}

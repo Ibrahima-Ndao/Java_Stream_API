@@ -1,0 +1,5 @@
+package streamAPI.database;
+
+public class DataOfPerson {
+
+}
